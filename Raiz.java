@@ -3,32 +3,31 @@ class Raiz {
 	// El valor a puede ser un número fijo, pero cuanto más alejado esté de la raiz,
 	// o pertenezca a un entorno del 0 que haga la división arbitariamente grande,
 	// más iteraciones serán necesarias.
-	public static double f(double a, double c) {
-		return (a + c/a)/2;
+	public static double f(double aprox, double c) {
+		return (aprox + c/aprox)/2;
 	}
 
+	/* 
+	 * Recibe por parámetro al menos el radicando
+	 */
 	public static void main(String[] args) {
 		double radicando = Float.parseFloat(args[0]);
+		double raiz_aproximada = radicando; 
 		double raiz = Math.sqrt(radicando);
-		double a = radicando; 
-		double i;
 		double iteraciones = 10;
 
-		if(args.length == 1)
-		{
+		if(args.length == 2) 
 			iteraciones = Float.parseFloat(args[1]);
-		}
 
-
-		for (i = 1; i < iteraciones ; i++)
+		for (double i = 0; i < iteraciones ; i++)
 		{
-			a = f(a, radicando);
+			raiz_aproximada = f(raiz_aproximada, radicando);
 			if ((i % 1) == 0)
 			{
-				System.out.println(i + ") " + a + "   diferencia: " + (raiz - a) );
+				System.out.println(i + ") " + raiz_aproximada + "   diferencia: " + (raiz - raiz_aproximada) );
 			}
 		}
-		System.out.println(i + ") " + a + "   diferencia: " + (raiz - a) );
+		System.out.println(iteraciones + ") " + raiz_aproximada + "   diferencia: " + (raiz - raiz_aproximada) );
 		
 	}
 }
