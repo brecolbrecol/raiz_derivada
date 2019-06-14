@@ -1,6 +1,6 @@
 class Raiz {
 
-	// El valor a puede ser un número fijo, pero cuanto más alejado esté de la raiz,
+	// El valor 'aprox' puede ser un número fijo, pero cuanto más alejado esté de la raiz,
 	// o pertenezca a un entorno del 0 que haga la división arbitariamente grande,
 	// más iteraciones serán necesarias.
 	public static double f(double aprox, double c) {
