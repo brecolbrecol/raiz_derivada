@@ -21,13 +21,14 @@ class Raiz {
 		if(args.length == 2) 
 			iteraciones = Float.parseFloat(args[1]);
 
+		System.out.println("i  | raiz_aproximada | diferencia  | diferencia con el cuadrado ");
 		for (double i = 0; i < iteraciones ; i++)
 		{
 			diferencia_anterior = diferencia;
 			raiz_aproximada = f(raiz_aproximada, radicando);
 			diferencia = raiz - raiz_aproximada;
 
-			System.out.println(i + ") " + raiz_aproximada + "   diferencia: " + diferencia );
+			System.out.println(i + ") " + raiz_aproximada + "  " + diferencia  +  "  " + ( radicando - raiz_aproximada*raiz_aproximada) );
 			if (diferencia == 0 || diferencia == diferencia_anterior)
 				break;
 		}
