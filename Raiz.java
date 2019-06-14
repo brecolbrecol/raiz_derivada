@@ -1,7 +1,6 @@
 class Raiz {
 
-	// El valor 'aprox' puede ser un número fijo, pero cuanto más alejado esté de la raiz,
-	// o pertenezca a un entorno del 0 que haga la división arbitariamente grande,
+	// El valor 'c' puede ser un número fijo, pero cuanto más alejado esté de la raiz
 	// más iteraciones serán necesarias.
 	public static double f(double aprox, double c) {
 		return (aprox + c/aprox)/2;
@@ -17,15 +16,16 @@ class Raiz {
 		double iteraciones = 100;
 		double diferencia_anterior = 1;
 		double diferencia = 0;
+		double c = radicando;
 
 		if(args.length == 2) 
-			iteraciones = Float.parseFloat(args[1]);
+			c = Float.parseFloat(args[1]);
 
 		System.out.println("i  | raiz_aproximada | diferencia  | diferencia con el cuadrado ");
 		for (double i = 0; i < iteraciones ; i++)
 		{
 			diferencia_anterior = diferencia;
-			raiz_aproximada = f(raiz_aproximada, radicando);
+			raiz_aproximada = f(raiz_aproximada, c);
 			diferencia = raiz - raiz_aproximada;
 
 			System.out.println(i + ") " + raiz_aproximada + "  " + diferencia  +  "  " + ( radicando - raiz_aproximada*raiz_aproximada) );
