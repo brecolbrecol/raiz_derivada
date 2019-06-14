@@ -1,9 +1,11 @@
 class Raiz {
 
-	// El valor 'c' puede ser un número fijo, pero cuanto más alejado esté de la raiz
-	// más iteraciones serán necesarias.
-	public static double f(double aprox, double c) {
-		return (aprox + c/aprox)/2;
+	public static double cuadrada(double aprox, double radicando) {
+		return (aprox + radicando/aprox)/2;
+	}
+
+	public static double cubica(double aprox, double radicando) {
+		return (2*aprox + radicando/(aprox*aprox))/3;
 	}
 
 	/* 
@@ -25,7 +27,21 @@ class Raiz {
 		for (double i = 0; i < iteraciones ; i++)
 		{
 			diferencia_anterior = diferencia;
-			raiz_aproximada = f(raiz_aproximada, c);
+			raiz_aproximada = cuadrada(raiz_aproximada, c);
+			diferencia = raiz - raiz_aproximada;
+
+			System.out.println(i + ") " + raiz_aproximada + "  " + diferencia  +  "  " + ( radicando - raiz_aproximada*raiz_aproximada) );
+			if (diferencia == 0 || diferencia == diferencia_anterior)
+				break;
+		}
+
+		diferencia_anterior = 1;
+		diferencia = 0;
+		System.out.println("i  | raiz_aproximada | diferencia  | diferencia con el cuadrado ");
+		for (double i = 0; i < iteraciones ; i++)
+		{
+			diferencia_anterior = diferencia;
+			raiz_aproximada = cubica(raiz_aproximada, c);
 			diferencia = raiz - raiz_aproximada;
 
 			System.out.println(i + ") " + raiz_aproximada + "  " + diferencia  +  "  " + ( radicando - raiz_aproximada*raiz_aproximada) );
