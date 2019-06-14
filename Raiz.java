@@ -9,7 +9,7 @@ class Raiz {
 		double radicando = Float.parseFloat(args[0]);
 		double raiz = Math.sqrt(radicando);
 
-		double a = radicando;
+		double a = 2.1;
 		double i;
 
 		for (i = 1; i < 9 ; i++)
