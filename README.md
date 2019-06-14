@@ -10,8 +10,9 @@ Sea c \in |R el radicando (número del cual se quiere calcular la raíz).
 
 Entonces, la función 
 
-f: |R -> |R
-x |-> x² -c
+f: ℝ → ℝ
+
+x ⟼ x² -c
 
 cumple que f(sqrt(c)) = 0
 
