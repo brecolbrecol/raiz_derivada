@@ -14,7 +14,7 @@ class Raiz {
 		double radicando = Float.parseFloat(args[0]);
 		double raiz_aproximada = radicando; 
 		double raiz = Math.sqrt(radicando);
-		double iteraciones = 10;
+		double iteraciones = 100;
 		double diferencia_anterior = 1;
 		double diferencia = 0;
 
@@ -27,12 +27,10 @@ class Raiz {
 			raiz_aproximada = f(raiz_aproximada, radicando);
 			diferencia = raiz - raiz_aproximada;
 
-			if ((i % 1) == 0)
-				System.out.println(i + ") " + raiz_aproximada + "   diferencia: " + diferencia );
+			System.out.println(i + ") " + raiz_aproximada + "   diferencia: " + diferencia );
 			if (diferencia == 0 || diferencia == diferencia_anterior)
 				break;
 		}
-		System.out.println("Resultado → " + raiz_aproximada + "   diferencia: " + (raiz - raiz_aproximada) );
 		
 	}
 }
