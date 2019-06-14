@@ -1,7 +1,7 @@
 class Raiz {
 
 	// El valor 'c' puede ser un número fijo, pero cuanto más alejado esté de la raiz
-	// más iteraciones serán necesarias.
+	// más iteraciones serán necesarias. <-- va a ser que no, comprobar que debe ser el radicando
 	public static double f(double aprox, double c) {
 		return (aprox + c/aprox)/2;
 	}
