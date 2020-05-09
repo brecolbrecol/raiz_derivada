@@ -6,7 +6,7 @@ Buscamos un método para calcular numéricamente la raíz cuadrada de un número
 
 ### Definición de la función 
 
-Sea c \in |R el radicando (número del cual se quiere calcular la raíz).
+Sea c ∈ ℝ el radicando (número del cual se quiere calcular la raíz).
 
 Entonces, la función 
 
